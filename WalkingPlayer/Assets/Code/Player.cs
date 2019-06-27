@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        //var t = collision.gameObject.tag;
         var otherObject = collision.collider.gameObject;
         if (otherObject.tag == "Magnifier")
         {
@@ -80,7 +82,7 @@ public class Player : MonoBehaviour
         if (otherObject.tag == "Debuff")
         {
             var scale = this.transform.localScale;
-            jumpSpeed -= 4;
+            jumpSpeed -= 8;
 
             this.transform.localScale = scale;
             otherObject.SetActive(false);
