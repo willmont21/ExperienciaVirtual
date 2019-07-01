@@ -70,9 +70,9 @@ public class Player : MonoBehaviour
         if (otherObject.tag == "Power")
         {
             var scale = this.transform.localScale;
-            scale.y *= 2;
-            scale.x *= 2;
-            jumpSpeed += 5;
+            scale.y = 2;
+            scale.x = 2;
+            jumpSpeed += 4;
 
             this.transform.localScale = scale;
             otherObject.SetActive(false);
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         if (otherObject.tag == "Debuff")
         {
             var scale = this.transform.localScale;
-            jumpSpeed -= 8;
+            jumpSpeed =8;
 
             this.transform.localScale = scale;
             otherObject.SetActive(false);
